@@ -1,0 +1,144 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Darmstadt}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{crane} % or try albatross, beaver, crane, ...
+  \usefonttheme{structurebold}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\title[Your Short Title]{GOLYGON}
+\subtitle{Batch-6 Members}
+\author{\textbf{G.Priyanka  21B01A0552 CSE\\D.Devisree  21B01A0540   CSE \\M.Kanthi  21B01A0462  ECE \\D.Anshu  21b01a0414  ECE  \\A.Likhitha 21b01a0101  CE}} 
+\institute{SVECW}
+\date{January 28, 2023}
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+\section{Python}
+\begin{frame}{Intoduction About The Project}
+\begin{itemize}
+  \item\textbf{The target is to construct all possible routes for a tourist visiting a grid-like city,taking into account blocked intersections and incresing step lengths.} 
+  \item\textbf{Input includes the number of cities to be visited, the length of the longest edge of the golygon for each city, and the coordinates of any blocked intersections.Output includes a list of possible golygons for each city and the number of solutions found.} 
+\end{itemize}
+\vskip 
+\end{frame}
+\begin{frame}
+\begin{block}{Example of sample input}
+1 \\8 \\2 \\-2 \\0 \\6 \\-2
+\end{block}
+\begin{itemize}
+\item\textbf{The above values are given as the input, then the output produces the directions to be followed and the number of Possible golygon(s).}
+\end{itemize}
+\begin{block}{Output}
+wsenenws \\Found 1 golygon(s)
+\end{block}
+\end{frame}
+\section{GOLYGON}
+\begin{frame}{Approach}
+\begin{itemize}
+\item \textbf{The problem can be solved by using a Depth-First Search (DFS) algorithm}
+\item \textbf{To implement this in code, we can generate a recursie function that takes  in the current position, edge length, and direction as parameters, and uses a stack to keep track of the path. The function should return the list of all possible golygons for a given city.}
+\end{itemize}
+\end{frame}
+\begin{frame}{Learnings}
+\begin{itemize}
+\item\textbf{The way of solving a problem that involves finding all possible paths on a grid.}
+\item\textbf{The good understanding of graph theory and pathfinding algorithms in order to implement a solution.}
+\item\textbf{The way of handling input and output in a specific format.}
+\item\textbf{Package: NumPy is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with these arrays. It is the fundamental package for scientific computing with Python}
+\end{itemize}
+\end{frame}
+\begin{frame}{Challenges}
+\begin{itemize}
+\item\textbf{Generating all possible golygon configurations:} There could be a large number of possible golygon configurations that need to be considered, making it computationally expensive.
+\item\textbf{Meeting all the restrictions:} Ensuring that all the intersections that are blocked are avoided in the final solution could be a complex task.
+\item\textbf{Finding the optimal solution:} Given the number of blocked intersections, the developer needs to find the best solution that satisfies all the restrictions and maximizes the size of the golygons.
+\item\textbf{Optimizing the performance:} As the number of blocked intersections increases, the number of possibilities to check will also increase, making the algorithm very slow. The developer need to make sure that the algorithm is optimized for performance.
+\end{itemize}
+\end{frame}
+\begin{frame}{Challenges}
+\begin{itemize}
+\item\textbf{Handling multiple cities:} The program should be able to handle multiple cities, each with its own set of blocked intersections and maximum golygon size.
+\item\textbf{Handling large input:} The program should be able to handle large inputs such as a large number of cities, a large number of blocked intersections, and a large maximum golygon size.
+\item\textbf{Output format:} The program should be able to output the solutions in the required format, which includes the sequence of characters and the number of solutions found for each city.
+\end{itemize}
+\end{frame}  
+\begin{frame}{Statistics}
+\begin{block}{Number of Lines of code}
+  132  
+\end{block}
+\begin{block}{Number of Functions used}
+7
+\end{block}
+\end{frame}
+\begin{frame}{Functions Used}
+\begin{block}{def direction(x, y, pos)}
+This Function is used to check if the current position is the endpoint and if it is then it will increment the number of possible paths and add the direction of the path to a string variable result. 
+\end{block}
+\begin{block}{def is visited(xx, yy)}
+This Function is used to track if the current cell has been visited or not
+\end{block}
+\begin{block}{def mark as visited(xx, yy)}
+This Function is used to mark the cell as visited 
+\end{block}
+\begin{block}{def mark as unvisited(xx, yy)}
+This Function is used to mark the cell as unvisited
+\end{block}
+\end{frame}
+\begin{frame}{Functions Used}
+\begin{block}{def dfs(x, y, pos, dir)}
+This Function is the main function that is called recursively to navigate through the grid. It takes in four parameters: the current x and y coordinates, the current position in the path, and the current direction.
+\end{block}
+\begin{block}{def create grid()}
+ This Function is used to create the grid 
+\end{block}
+\begin{block}{def create visited grid()}
+This Function is used to create the visited grid.
+\end{block}
+\end{frame}
+\begin{frame}{Demo of the Project \\Screen Shots of the Project}
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=0.5\textheight]{s1.png}}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=0.5\textheight]{s2.png}}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=0.5\textheight]{s3.png}}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=0.5\textheight]{s4.png}}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=0.5\textheight]{output.png}}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{center}
+\Huge{Thank You}
+\end{center}
+\end{frame}
+\end{document}
